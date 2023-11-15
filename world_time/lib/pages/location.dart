@@ -16,11 +16,27 @@ class Location extends StatefulWidget {
 class _LocationState extends State<Location> {
   int count =0;
 
+  void getData() async {
+    //simulate network request for a username
+    String username = await Future.delayed(Duration(seconds:5),(){
+   
+        return 'rush';
+    });
+//simulate network request for bio of user 
+    Future.delayed(Duration(seconds:2),(){
+        print("user rush");
+    });
+    print("after delay");
+    print('$username');
+  }
   @override
   void initState() {
     super.initState();
     print("init state func ran");
+    getData();
+    print('ran before async func');
   }
+
 
   @override
   Widget build(BuildContext context) {
