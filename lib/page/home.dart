@@ -54,6 +54,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
                   icon: Icon(Icons.add),
                   onPressed: () {
                     addTodo();
+                    
                   },
                 ),
               ],
