@@ -4,6 +4,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner:false,
       title: 'Simple Todo App',
       home: TodoListScreen(),
     );
@@ -74,6 +75,9 @@ class _TodoListScreenState extends State<TodoListScreen> {
         
         
       });
+    }
+    else{
+      print("no input");
     }
     
   }
